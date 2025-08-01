@@ -50,13 +50,15 @@
             <button class="tab-button" onclick="showImage(this, 5)">General Weapons</button>
         </div>
         <!-- Images -->
-        <div class="tab-images">
-            <img src="images/armadaclothes.jpg" class="tab-image active" alt="Armada Clothes"/>
-            <img src="images/valencianclothes.jpg" class="tab-image" alt="Valencian Clothes"/>
-            <img src="images/ebonclothes.jpg" class="tab-image" alt="Ebon Clothes"/>
-            <img src="images/armadaaccessories.jpg" class="tab-image" alt="Armada Accessories"/>
-            <img src="images/eccentricaccessories.jpg" class="tab-image" alt="Eccentric Accessories"/>
-            <img src="images/generalweapons.jpg" class="tab-image" alt="General Weapons"/>
+        <div class="tab-imagescontainer">
+            <div class="tab-images auto-size">
+                <img src="images/armadaclothes.jpg" class="tab-image active" alt="Armada Clothes"/>
+                <img src="images/valencianclothes.jpg" class="tab-image" alt="Valencian Clothes"/>
+                <img src="images/ebonclothes.jpg" class="tab-image" alt="Ebon Clothes"/>
+                <img src="images/armadaaccessories.jpg" class="tab-image" alt="Armada Accessories"/>
+                <img src="images/eccentricaccessories.jpg" class="tab-image" alt="Eccentric Accessories"/>
+                <img src="images/generalweapons.jpg" class="tab-image" alt="General Weapons"/>
+            </div>
         </div>
       </div>
       <h2 class="section-header">Rooke's Weapons</h2>
@@ -352,6 +354,20 @@
         images.forEach(img => {
         maxWidth = Math.max(maxWidth, img.naturalWidth);
         maxHeight = Math.max(maxHeight, img.naturalHeight);
+        });
+        container.style.width = maxWidth + "px";
+        container.style.height = maxHeight + "px";
+    });
+    });
+
+    window.addEventListener("load", () => {
+    document.querySelectorAll(".tab-images.auto-size").forEach(container => {
+        const images = container.querySelectorAll("img");
+        let maxWidth = 0, maxHeight = 0;
+        images.forEach(img => {
+        const rect = img.getBoundingClientRect(); // Measures displayed size
+        maxWidth = Math.max(maxWidth, rect.width);
+        maxHeight = Math.max(maxHeight, rect.height);
         });
         container.style.width = maxWidth + "px";
         container.style.height = maxHeight + "px";

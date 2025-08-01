@@ -453,6 +453,11 @@ body {
   position: relative;
 }
 
+.tab-images.auto-size {
+  display: inline-block;  /* Shrinks to fit the largest child */
+  position: relative;
+}
+
 .tab-images1 {
   position: relative;
 }
