@@ -364,8 +364,12 @@
     document.querySelectorAll(".tab-images.auto-size").forEach(container => {
         const images = container.querySelectorAll("img");
         let maxWidth = 0, maxHeight = 0;
+        const screenWidth = window.innerWidth;
         images.forEach(img => {
-        const scale = 0.5;
+        let scale = 0.5;
+        if (screenWidth <= 768) {
+            scale = Math.min((screenWidth * 0.95) / img.naturalWidth, 1);
+        }
         const scaledWidth = img.naturalWidth * scale;
         const scaledHeight = img.naturalHeight * scale;
         // Apply exact scaled size to the image
