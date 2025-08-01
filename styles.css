@@ -417,6 +417,7 @@ body {
   justify-content: center;
   gap: 10px;
   margin-bottom: 15px;
+  flex-wrap: wrap;
 }
 
 .tab-button {
