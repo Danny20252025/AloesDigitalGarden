@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9KB38ZJJN2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-9KB38ZJJN2');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A blog all things Pirate101 and Wizard101!" />
+  <title>Aloe's Digital Garden</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/images/peacock2.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("images/eastonairbornhouse.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-strip">
+    <h1>Aloe's Digital Garden</h1>
+    <input type="text" placeholder="whatcha lookin for? :D" id="searchBar">
+  </div>
+
+  <div class="skyway-section">
+    <div class="main-column">
+      <div class="skyway-cards">
+        <a href="Pirate101-Mooshu-Dock-Guide/mooshudockguidehomepage.html" class="skyway-card" data-keywords="Mooshu, Pirate101, Dock, Guide, Stagecoach, Skyway, Gear, Equipment, Companions">
+          <img src="images/pirate101mooshudockguide.jpg" alt="Pirate101 Mooshu Dock Guide">
+          <div class="card-text">
+            <h3>Pirate101 Mooshu Dock Guide</h3>
+            <p>Tired of travelling 10000+ steps in Mooshu? Not sure which dock to go to with the stagecoach? Not sure what gear and companions you can get in Mooshu? This extensive guide will help!</p>
+          </div>
+        </a>
+
+        <a href="valenciapart3.html" class="skyway-card"  data-keywords="Valencia, Test Realm, Part 3, Equipment, Gear, Pirate101">
+          <img src="images/absolutequeen.png" alt="Slay Queen!">
+          <div class="card-text">
+            <h3>Valencia Part 3 Gear</h3>
+            <p>We're all excited for Valencia part 3 to finally come to Pirate101 live! Let's take a look at all of the gear that's going to be made available and what it could mean.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <aside class="side-column">
+      <!-- put your small stuff here -->
+      <h3>Check out these sick people!</h3>
+      <ul>
+        <li><img src="images/GPTG.webp" alt="GPTG" class="small-img3">GPTG: <a href="https://www.twitch.tv/gptg" target="_blank"><img src="images/twitchicon.png" alt="Twitch" class="small-img3"></a> <a href="https://www.youtube.com/@goatpatrol8805" target="_blank"><img src="images/youtubeicon.png" alt="Youtube" class="small-img3"></a></li>
+        <li><img src="images/silven.png" alt="Silven47" class="small-img3">Silven47: <a href="https://www.twitch.tv/silven47" target="_blank"><img src="images/twitchicon.png" alt="Twitch" class="small-img3"></a> <a href="https://www.youtube.com/@Silven47" target="_blank"><img src="images/youtubeicon.png" alt="Youtube" class="small-img3"></a></li>
+        <li><img src="images/animus_2k.png" alt="Animus_2k" class="small-img3">Animus_2k: <a href="https://www.twitch.tv/animus_2k" target="_blank"><img src="images/twitchicon.png" alt="Twitch" class="small-img3"></a></li>
+      </ul>
+      <p>
+        Contact me or give feedback! <a href="https://docs.google.com/forms/d/e/1FAIpQLScRIT0Oypc3wR1incHNQQ4BPX9NJ6KDGNdRmVg-LakFRwv_ZA/viewform?usp=sharing&ouid=101518607963816444781" target="_blank">Google Form</a>
+      </p>
+      <div class="image-text-row">
+        <img src="https://danny20252025.github.io/Pirate101-Mooshu-Dock-Guide/images/pirateprof.png" alt="me">
+        <p>Love you guys! Have fun in the Spiral! - aloeverza</p>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    document.getElementById("searchBar").addEventListener("input", function () {
+      const query = this.value.toLowerCase();
+      document.querySelectorAll(".skyway-card").forEach(card => {
+        const keywords = (card.dataset.keywords || "").toLowerCase();
+        const text = card.textContent.toLowerCase();
+        const matches = text.includes(query) || keywords.includes(query);
+        card.classList.toggle("hidden", !matches);
+      });
+    });
+  </script>
+</body>
+</html>
