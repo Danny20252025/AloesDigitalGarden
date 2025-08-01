@@ -570,11 +570,15 @@ body {
 @media (max-width: 768px) {
   .tab-images.auto-size {
     width: 95% !important;  /* Fit almost full width */
+    max-width: 95% !important;
     height: auto !important; /* Let height adjust */
+    display: block;          /* ensures it spans full width */
+    margin: 0 auto;
   }
 
   .tab-images.auto-size img {
     width: 100% !important;  /* Scale to container width */
     height: auto !important; /* Maintain aspect ratio */
+    position: relative;      /* remove any absolute positioning */
   }
 }
