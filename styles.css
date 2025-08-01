@@ -482,7 +482,6 @@ body {
 
 .tab-image {
   display: none;        /* Hide by default */
-  width: 70%;
   margin: 0 auto;
 }
 
@@ -565,5 +564,17 @@ body {
 @media (max-width: 768px) {
   .dock-layout img {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tab-images.auto-size {
+    width: 95% !important;  /* Fit almost full width */
+    height: auto !important; /* Let height adjust */
+  }
+
+  .tab-images.auto-size img {
+    width: 100% !important;  /* Scale to container width */
+    height: auto !important; /* Maintain aspect ratio */
   }
 }
