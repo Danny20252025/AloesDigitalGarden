@@ -285,6 +285,11 @@ body {
   height: auto; /* maintain aspect ratio */
 }
 
+.small-img3 {
+  width: 30px;
+  height: auto; /* maintain aspect ratio */
+}
+
 .rounded-img {
   border-radius: 12px; /* Adjust this value for more/less rounding */
 }
