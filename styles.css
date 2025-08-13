@@ -513,6 +513,9 @@ body {
   font-weight: bold;
 }
 
+.pet-img {
+}
+
 @media (max-width: 768px) {
   .page-wrapper,
   .skyway-section,
@@ -563,6 +566,12 @@ body {
 
 @media (max-width: 768px) {
   .dock-layout img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .pet-img {
     width: 100%;
   }
 }
