@@ -516,6 +516,15 @@ body {
 .pet-img {
 }
 
+.gear-image {
+    width: 100%;
+    max-width: 600px;   /* adjust this number to make them the size you want */
+    height: auto;
+    display: block;
+    margin: 0 auto;     /* centers the images */
+    object-fit: contain;
+}
+
 @media (max-width: 768px) {
   .page-wrapper,
   .skyway-section,
